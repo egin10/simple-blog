@@ -2,6 +2,7 @@
   background-color: #f1f2f6;
   border: solid 0px grey;
   width: 550px;
+  /* height: 220px; */
   border-radius: 5px;
   display: inline-block;
   box-sizing: border-box;
@@ -12,26 +13,26 @@
   margin: 6px;
 }
 
-.title-post {
+.post-box .title-post {
   box-sizing: border-box;
   color: black;
   margin: 5px;
 }
 
-.body-post {
-  color: grey;
+.post-box .body-post {
   box-sizing: border-box;
-  margin: 5px;
+  margin: 5px 10px;
   font-size: 16px;
+  height: 85px;
 }
 
-.btn-like {
+.post-box .btn-like {
   background-color: transparent;
   color: #16a085;
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  margin: 5px;
+  margin: 5px 10px;
   margin-bottom: 5px;
   border: 2px solid #16a085;
   box-sizing: border-box;
@@ -40,12 +41,20 @@
   padding: 0px;
 }
 
-.btn-read {
+.post-box .btn-read {
   background-color: transparent;
-  margin-left: 75%;
+  margin-left: 65%;
+  margin-bottom: 10px;
   border: 1.5px solid #16a085;
   border-radius: 10px;
   width: 130px;
   height: 25px;
   color: #7f8c8d;
+}
+
+.post-box span {
+  color: grey;
+  font-size: 11px;
+  margin: 5px 10px;
+  display: block;
 }

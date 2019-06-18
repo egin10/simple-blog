@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+
+footer p {
+  color: #2f3542;
+}
+
+footer a {
+  color: #16a085;
+}
