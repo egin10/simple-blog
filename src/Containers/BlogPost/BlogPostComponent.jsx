@@ -1,30 +1,29 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import "./BlogPostComponent.css";
+import PostArticle from "../../Components/PostArticle/PostArticleComponent";
+import axios from "axios";
 
-class BlogPostComponent extends Component {
+export default class BlogPostComponent extends Component {
   state = {
     posts: []
     //https://jsonplaceholder.typicode.com/posts
   };
 
+  componentDidMount() {
+    axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
+      for (let i = 0; i < 6; i++) {
+        this.state.posts.push(res.data[i]);
+      }
+    });
+  }
+
   render() {
     return (
-      <Fragment>
-        <h3>Posting</h3>
-        <div className="post-box">
-          <h3 className="title-post">Title Post</h3>
-          <p className="body-post">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
-            nostrum voluptates ipsum impedit ratione debitis quisquam
-            perspiciatis ipsam aliquid placeat beatae, earum reprehenderit enim
-            dolores accusantium voluptate harum unde? Ipsam.
-          </p>
-          <button className="btn-like">Like</button>
-          <button className="btn-read">Read more...</button>
-        </div>
-      </Fragment>
+      <div className="article-page">
+        <h3 className="header">Articles</h3>
+        <hr />
+        <PostArticle />
+      </div>
     );
   }
 }
-
-export default BlogPostComponent;
