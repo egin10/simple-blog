@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/simple-blog/static/css/main.b5e9772a.chunk.css",
-    "main.js": "/simple-blog/static/js/main.30f0c6b0.chunk.js",
-    "main.js.map": "/simple-blog/static/js/main.30f0c6b0.chunk.js.map",
+    "main.css": "/simple-blog/static/css/main.8f3b86d5.chunk.css",
+    "main.js": "/simple-blog/static/js/main.958b6c0d.chunk.js",
+    "main.js.map": "/simple-blog/static/js/main.958b6c0d.chunk.js.map",
     "runtime~main.js": "/simple-blog/static/js/runtime~main.5e2413b1.js",
     "runtime~main.js.map": "/simple-blog/static/js/runtime~main.5e2413b1.js.map",
     "static/js/2.a54cdf1a.chunk.js": "/simple-blog/static/js/2.a54cdf1a.chunk.js",
     "static/js/2.a54cdf1a.chunk.js.map": "/simple-blog/static/js/2.a54cdf1a.chunk.js.map",
     "index.html": "/simple-blog/index.html",
-    "precache-manifest.9c3ddd95e7cba4e3e70ca464526101dc.js": "/simple-blog/precache-manifest.9c3ddd95e7cba4e3e70ca464526101dc.js",
+    "precache-manifest.5f133ac200fcc93e2d58a454bcd420a9.js": "/simple-blog/precache-manifest.5f133ac200fcc93e2d58a454bcd420a9.js",
     "service-worker.js": "/simple-blog/service-worker.js",
-    "static/css/main.b5e9772a.chunk.css.map": "/simple-blog/static/css/main.b5e9772a.chunk.css.map",
+    "static/css/main.8f3b86d5.chunk.css.map": "/simple-blog/static/css/main.8f3b86d5.chunk.css.map",
     "static/media/reactjs.png": "/simple-blog/static/media/reactjs.47ce6e77.png"
   }
 }
