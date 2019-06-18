@@ -28,13 +28,28 @@
 
 .post-box .btn-like {
   background-color: transparent;
-  color: #16a085;
-  width: 30px;
+  color: rgba(25, 181, 254, 1);
+  width: 40px;
   height: 30px;
   border-radius: 50px;
   margin: 5px 10px;
   margin-bottom: 5px;
-  border: 2px solid #16a085;
+  border: 2px solid rgba(25, 181, 254, 1);
+  box-sizing: border-box;
+  font-size: 10px;
+  text-align: center;
+  padding: 0px;
+}
+
+.post-box .btn-dislike {
+  background-color: transparent;
+  color: rgba(207, 0, 15, 1);
+  width: 40px;
+  height: 30px;
+  border-radius: 50px;
+  margin: 5px 10px;
+  margin-bottom: 5px;
+  border: 2px solid rgba(207, 0, 15, 1);
   box-sizing: border-box;
   font-size: 10px;
   text-align: center;

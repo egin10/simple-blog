@@ -26,9 +26,25 @@ export default class BlogPostComponent extends Component {
     this.setState({ paginate: newPaginate })
   }
 
+  changeLikes = (id) => {
+    let newVal = this.state.posts[id - 1]
+    this.setState({ likes: newVal.likes++ })
+  }
+
+  changeDislikes = (id) => {
+    let newVal = this.state.posts[id - 1]
+    this.setState({ dislikes: newVal.dislikes++ })
+  }
+
   componentDidMount() {
     axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
-      this.setState({ posts: res.data })
+      let newData = []
+      res.data.map(data => {
+        data['likes'] = 0
+        data['dislikes'] = 0
+        return newData.push(data)
+      })
+      this.setState({ posts: newData })
     });
   }
 
@@ -41,7 +57,11 @@ export default class BlogPostComponent extends Component {
         <h3 className="header">Articles</h3>
         <hr />
         {
-          posts.slice(first, last).map(post => <PostArticle key={post.id} data={post} />)
+          posts.slice(first, last).map(post => <PostArticle
+            key={post.id}
+            data={post}
+            handleLike={this.changeLikes}
+            handleDislike={this.changeDislikes} />)
         }
         <div className="paginate">
           <button className="btn-prev"

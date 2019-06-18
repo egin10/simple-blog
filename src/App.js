@@ -9,7 +9,7 @@ function App() {
       <HomeComponent />
       <BlogPostComponent />
       <footer>
-        <p>Copyright&copy;2019.<a href="https://github.com/egin10" target="_blank">egin10</a></p>
+        <p>Copyright&copy;2019.<a href="https://github.com/egin10" target="_blank" rel="noopener noreferrer">egin10</a></p>
       </footer>
     </div>
   );
