@@ -1,5 +1,7 @@
 {
-  "name": "test",
+  "name": "simple-blog",
+  "author": "egin10",
+  "description": "learn to build a simple blog using reactjs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
