@@ -12,7 +12,7 @@ export default class BlogPostComponent extends Component {
       last: 4,
       current: 1
     },
-    isSearch: false
+    isLikeDislike: false
   };
 
   //handler
@@ -32,14 +32,12 @@ export default class BlogPostComponent extends Component {
     this.setState({ paginate: newPaginate });
   };
 
-  changeLikes = id => {
-    let newVal = this.state.posts[id - 1];
-    this.setState({ likes: newVal.likes++ });
+  changeLikes = data => {
+    this.patchLikeAPI(data.id, data.likes + 1);
   };
 
-  changeDislikes = id => {
-    let newVal = this.state.posts[id - 1];
-    this.setState({ dislikes: newVal.dislikes++ });
+  changeDislikes = data => {
+    this.patchDislikeAPI(data.id, data.dislikes + 1);
   };
 
   handleSearch = (word) => {
@@ -48,13 +46,10 @@ export default class BlogPostComponent extends Component {
 
   //communication to API
   getPostAPI = () => {
+    let current = this.state.isLikeDislike ? this.state.paginate : { first: 0, last: 4, current: 1 }
     axios.get("http://localhost:3001/posts?_sort=id&_order=desc").then(res => this.setState({
       posts: res.data,
-      paginate: {
-        first: 0,
-        last: 4,
-        current: 1
-      }
+      paginate: current
     }));
   }
 
@@ -67,6 +62,18 @@ export default class BlogPostComponent extends Component {
         current: 1
       }
     }))
+  }
+
+  patchLikeAPI = (id, value) => {
+    this.setState({ isLikeDislike: true })
+    axios.patch(`http://localhost:3001/posts/${id}`, { 'likes': value })
+      .then(() => this.getPostAPI())
+  }
+
+  patchDislikeAPI = (id, value) => {
+    this.setState({ isLikeDislike: true })
+    axios.patch(`http://localhost:3001/posts/${id}`, { 'dislikes': value })
+      .then(() => this.getPostAPI())
   }
 
   //Lifecycle

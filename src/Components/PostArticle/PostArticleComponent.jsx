@@ -9,8 +9,8 @@ const PostArticle = props => {
       <hr />
       <p className="body-post">{data.body.length >= 250 ? data.body.slice(0, 250) + "..." : data.body}</p>
       <span>{data.likes} Likes &emsp;|&emsp; {data.dislikes} Dislikes</span>
-      <button className="btn-like" onClick={() => props.handleLike(data.id)} >Like</button>
-      <button className="btn-dislike" onClick={() => props.handleDislike(data.id)} >Dislike</button>
+      <button className="btn-like" onClick={() => props.handleLike(data)} >Like</button>
+      <button className="btn-dislike" onClick={() => props.handleDislike(data)} >Dislike</button>
       <button className="btn-read">Read more...</button>
     </div>
   );
