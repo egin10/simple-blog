@@ -26,10 +26,10 @@ export default class BlogPostComponent extends Component {
 
   changePaginateLast = () => {
     let newPaginate = this.state.paginate;
-    newPaginate.first = newPaginate.first + 4;
-    newPaginate.last = newPaginate.last + 4;
-    newPaginate.current = newPaginate.current + 1;
-    this.setState({ paginate: newPaginate });
+    if (newPaginate.first + 4 <= this.state.posts.length) newPaginate.first = newPaginate.first + 4;
+    if (newPaginate.last <= this.state.posts.length) newPaginate.last = newPaginate.last + 4;
+    if (newPaginate.current < Math.ceil(this.state.posts.length / 4)) newPaginate.current = newPaginate.current + 1;
+    this.setState({ paginate: newPaginate }, console.log(newPaginate));
   };
 
   changeLikes = id => {
