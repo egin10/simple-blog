@@ -48,7 +48,14 @@ export default class BlogPostComponent extends Component {
 
   //communication to API
   getPostAPI = () => {
-    axios.get("http://localhost:3001/posts?_sort=id&_order=desc").then(res => this.setState({ posts: res.data }));
+    axios.get("http://localhost:3001/posts?_sort=id&_order=desc").then(res => this.setState({
+      posts: res.data,
+      paginate: {
+        first: 0,
+        last: 4,
+        current: 1
+      }
+    }));
   }
 
   getSearchAPI = (word) => {
