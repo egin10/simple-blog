@@ -13,63 +13,73 @@ export default class BlogPostComponent extends Component {
   };
 
   changePaginateFirst = () => {
-    let newPaginate = this.state.paginate
-    newPaginate.first = newPaginate.first - 4
-    newPaginate.last = newPaginate.last - 4
-    this.setState({ paginate: newPaginate })
-  }
+    let newPaginate = this.state.paginate;
+    newPaginate.first = newPaginate.first - 4;
+    newPaginate.last = newPaginate.last - 4;
+    this.setState({ paginate: newPaginate });
+  };
 
   changePaginateLast = () => {
-    let newPaginate = this.state.paginate
-    newPaginate.first = newPaginate.first + 4
-    newPaginate.last = newPaginate.last + 4
-    this.setState({ paginate: newPaginate })
-  }
+    let newPaginate = this.state.paginate;
+    newPaginate.first = newPaginate.first + 4;
+    newPaginate.last = newPaginate.last + 4;
+    this.setState({ paginate: newPaginate });
+  };
 
-  changeLikes = (id) => {
-    let newVal = this.state.posts[id - 1]
-    this.setState({ likes: newVal.likes++ })
-  }
+  changeLikes = id => {
+    let newVal = this.state.posts[id - 1];
+    this.setState({ likes: newVal.likes++ });
+  };
 
-  changeDislikes = (id) => {
-    let newVal = this.state.posts[id - 1]
-    this.setState({ dislikes: newVal.dislikes++ })
-  }
+  changeDislikes = id => {
+    let newVal = this.state.posts[id - 1];
+    this.setState({ dislikes: newVal.dislikes++ });
+  };
 
   componentDidMount() {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
-      let newData = []
+    axios.get("http://localhost:3001/posts").then(res => {
+      let newData = [];
       res.data.map(data => {
-        data['likes'] = 0
-        data['dislikes'] = 0
-        return newData.push(data)
-      })
-      this.setState({ posts: newData })
+        data["likes"] = 0;
+        data["dislikes"] = 0;
+        return newData.push(data);
+      });
+      this.setState({ posts: newData });
     });
   }
 
   render() {
-    let first = this.state.paginate.first
-    let last = this.state.paginate.last
-    let posts = this.state.posts
+    let first = this.state.paginate.first;
+    let last = this.state.paginate.last;
+    let posts = this.state.posts;
     return (
       <div className="article-page">
         <h3 className="header">Articles</h3>
         <hr />
-        {
-          posts.slice(first, last).map(post => <PostArticle
+        <button className="add-new-post">Add New Post</button>
+        {posts.slice(first, last).map(post => (
+          <PostArticle
             key={post.id}
             data={post}
             handleLike={this.changeLikes}
-            handleDislike={this.changeDislikes} />)
-        }
+            handleDislike={this.changeDislikes}
+          />
+        ))}
         <div className="paginate">
-          <button className="btn-prev"
+          <button
+            className="btn-prev"
             onClick={this.changePaginateFirst}
-            disabled={first === 0 ? true : false}>Prev</button>
-          <button className="btn-next"
+            disabled={first === 0 ? true : false}
+          >
+            Prev
+          </button>
+          <button
+            className="btn-next"
             onClick={this.changePaginateLast}
-            disabled={first === (posts.length - 4) ? true : false}>Next</button>
+            disabled={first === posts.length - 4 ? true : false}
+          >
+            Next
+          </button>
         </div>
         <hr />
       </div>

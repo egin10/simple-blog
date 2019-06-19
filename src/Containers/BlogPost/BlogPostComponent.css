@@ -45,3 +45,15 @@
   background-color: #2f3542;
   color: whitesmoke;
 }
+
+.article-page .add-new-post {
+  display: block;
+  margin-left: 6%;
+  height: 35px;
+  width: 140px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: #16a085 solid 2px;
+  box-shadow: -2px -2px 3px #16a085;
+  font-size: calc(10px + 1vmin);
+}
