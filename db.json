@@ -93,7 +93,7 @@
       "id": 12,
       "title": "November Sierra Foxtrot Victor Lima Papa Echo Whiskey Bravo Oscar Uniform Mike Charlie Tango Romeo X-ray Golf Zulu Yankee",
       "body": "nulla sed vel enim sit amet nunc viverra dapibus nulla",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -101,7 +101,7 @@
       "id": 13,
       "title": "Victor Yankee Alfa Juliett Sierra Uniform Mike Bravo X-ray Echo Lima Delta Charlie India",
       "body": "non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -109,7 +109,7 @@
       "id": 14,
       "title": "Foxtrot November Whiskey Bravo X-ray Yankee Charlie Quebec Echo Oscar Victor Romeo Kilo Tango Lima",
       "body": "aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -117,7 +117,7 @@
       "id": 15,
       "title": "November India Hotel Golf Bravo Juliett Oscar Kilo Romeo Whiskey Quebec Mike Echo Yankee Charlie Alfa",
       "body": "proin eu mi nulla ac enim in tempor turpis nec euismod",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -142,7 +142,7 @@
       "title": "Whiskey Juliett Quebec Uniform November Delta Echo Lima Zulu Papa Sierra Mike Oscar Alfa Romeo Hotel Bravo Yankee",
       "body": "eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 1,
@@ -157,7 +157,7 @@
       "id": 20,
       "title": "Yankee Kilo Whiskey Sierra India Romeo Victor November Papa Lima Delta",
       "body": "mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -166,7 +166,7 @@
       "title": "Echo Golf Whiskey Mike Kilo Oscar November Yankee Juliett Foxtrot Uniform Delta Alfa Charlie Victor Lima Tango Quebec Romeo Hotel",
       "body": "faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 1,
@@ -174,14 +174,14 @@
       "title": "Lima Romeo Uniform Mike Foxtrot Kilo Sierra Juliett Golf Victor",
       "body": "diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 2,
       "id": 23,
       "title": "Foxtrot Zulu Oscar Tango Sierra Delta Golf Whiskey Quebec Uniform Yankee X-ray",
       "body": "rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {
@@ -190,7 +190,7 @@
       "title": "Hotel Echo Golf Yankee Tango Oscar Zulu Juliett Alfa Whiskey India Lima Uniform",
       "body": "nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 1,
@@ -198,7 +198,7 @@
       "title": "November Juliett Yankee Lima Victor Alfa X-ray Foxtrot Quebec Bravo Kilo Papa India Whiskey Uniform Charlie Oscar",
       "body": "sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 2,
@@ -206,7 +206,7 @@
       "title": "Yankee Echo Tango Bravo Alfa Delta Papa Juliett Victor Foxtrot Lima November Hotel Mike X-ray Romeo Charlie Uniform",
       "body": "ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 0,
@@ -214,7 +214,7 @@
       "title": "Romeo Sierra Tango Golf Foxtrot Victor Kilo Lima Papa X-ray Echo Juliett Hotel Bravo Whiskey Charlie India Zulu Quebec Alfa",
       "body": "justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est",
       "likes": 0,
-      "dislikes": 0
+      "dislikes": 1
     },
     {
       "userId": 1,
@@ -277,7 +277,7 @@
       "id": 35,
       "title": "Echo Romeo Foxtrot X-ray Charlie Sierra Quebec Alfa Delta Papa Hotel November Oscar Victor Bravo",
       "body": "dui proin leo odio porttitor id consequat in consequat ut",
-      "likes": 0,
+      "likes": 1,
       "dislikes": 0
     },
     {

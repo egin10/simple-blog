@@ -6,6 +6,7 @@ import SearchBox from './../../Components/SearchBox/SearchBoxComponent';
 
 export default class BlogPostComponent extends Component {
   state = {
+    url: "http://json-server-simple-blog.herokuapp.com",
     posts: [],
     paginate: {
       first: 0,
@@ -47,14 +48,14 @@ export default class BlogPostComponent extends Component {
   //communication to API
   getPostAPI = () => {
     let current = this.state.isLikeDislike ? this.state.paginate : { first: 0, last: 4, current: 1 }
-    axios.get("http://localhost:3001/posts?_sort=id&_order=desc").then(res => this.setState({
+    axios.get(`${this.state.url}/posts?_sort=id&_order=desc`).then(res => this.setState({
       posts: res.data,
       paginate: current
     }));
   }
 
   getSearchAPI = (word) => {
-    axios.get(`http://localhost:3001/posts?q=${word}`).then(res => this.setState({
+    axios.get(`${this.state.url}/posts?q=${word}`).then(res => this.setState({
       posts: res.data,
       paginate: {
         first: 0,
@@ -66,13 +67,13 @@ export default class BlogPostComponent extends Component {
 
   patchLikeAPI = (id, value) => {
     this.setState({ isLikeDislike: true })
-    axios.patch(`http://localhost:3001/posts/${id}`, { 'likes': value })
+    axios.patch(`${this.state.url}/posts/${id}`, { 'likes': value })
       .then(() => this.getPostAPI())
   }
 
   patchDislikeAPI = (id, value) => {
     this.setState({ isLikeDislike: true })
-    axios.patch(`http://localhost:3001/posts/${id}`, { 'dislikes': value })
+    axios.patch(`${this.state.url}/posts/${id}`, { 'dislikes': value })
       .then(() => this.getPostAPI())
   }
 
