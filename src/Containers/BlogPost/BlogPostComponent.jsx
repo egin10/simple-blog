@@ -29,7 +29,7 @@ export default class BlogPostComponent extends Component {
     if (newPaginate.first + 4 <= this.state.posts.length) newPaginate.first = newPaginate.first + 4;
     if (newPaginate.last <= this.state.posts.length) newPaginate.last = newPaginate.last + 4;
     if (newPaginate.current < Math.ceil(this.state.posts.length / 4)) newPaginate.current = newPaginate.current + 1;
-    this.setState({ paginate: newPaginate }, console.log(newPaginate));
+    this.setState({ paginate: newPaginate });
   };
 
   changeLikes = id => {
@@ -103,7 +103,7 @@ export default class BlogPostComponent extends Component {
           <button
             className="btn-next"
             onClick={this.changePaginateLast}
-            disabled={paginate.first === posts.length - 4 || posts.length < 4 ? true : false}
+            disabled={paginate.current === Math.ceil(posts.length / 4) ? true : false}
           >
             Next
           </button>
