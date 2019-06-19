@@ -10,6 +10,8 @@
   text-align: left;
   display: inline-block;
   margin: 6px;
+  border-left: solid grey 1px;
+  border-top: solid #16a085 1px;
 }
 
 .post-box .title-post {
@@ -57,7 +59,7 @@
 
 .post-box .btn-read {
   background-color: transparent;
-  margin-left: 65%;
+  margin-left: 75%;
   margin-bottom: 10px;
   border: 1.5px solid #16a085;
   border-radius: 10px;

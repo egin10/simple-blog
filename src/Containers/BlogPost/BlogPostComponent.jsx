@@ -11,7 +11,8 @@ export default class BlogPostComponent extends Component {
       first: 0,
       last: 4,
       current: 1
-    }
+    },
+    isSearch: false
   };
 
   //handler
@@ -51,7 +52,14 @@ export default class BlogPostComponent extends Component {
   }
 
   getSearchAPI = (word) => {
-    axios.get(`http://localhost:3001/posts?q=${word}`).then(res => this.setState({ posts: res.data }))
+    axios.get(`http://localhost:3001/posts?q=${word}`).then(res => this.setState({
+      posts: res.data,
+      paginate: {
+        first: 0,
+        last: 4,
+        current: 1
+      }
+    }))
   }
 
   //Lifecycle
@@ -77,7 +85,7 @@ export default class BlogPostComponent extends Component {
           />
         ))}
         <div className="paginate">
-          <span>{paginate.current} of {Math.ceil(posts.length / 4)} pages.</span>
+          <span>{posts.length === 0 ? 0 : paginate.current} of {Math.ceil(posts.length / 4)} pages.</span>
           <button
             className="btn-prev"
             onClick={this.changePaginateFirst}
