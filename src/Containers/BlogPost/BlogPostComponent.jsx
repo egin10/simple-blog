@@ -6,7 +6,7 @@ import SearchBox from './../../Components/SearchBox/SearchBoxComponent';
 
 export default class BlogPostComponent extends Component {
   state = {
-    url: "http://json-server-simple-blog.herokuapp.com",
+    url: "https://json-server-simple-blog.herokuapp.com",
     posts: [],
     paginate: {
       first: 0,
