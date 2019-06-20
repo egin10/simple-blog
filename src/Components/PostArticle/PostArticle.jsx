@@ -1,5 +1,5 @@
 import React from "react";
-import "./PostArticleComponent.css";
+import "./PostArticle.css";
 
 const PostArticle = props => {
   let data = props.data

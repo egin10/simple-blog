@@ -1,5 +1,5 @@
 import React from 'react'
-import "./SearchBoxComponent.css"
+import "./SearchBox.css"
 
 const SearchBox = props => {
     const handleInput = (e) => {

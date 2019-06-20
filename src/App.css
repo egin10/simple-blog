@@ -32,10 +32,27 @@
   }
 }
 
-footer p {
-  color: #2f3542;
+.container {
+  margin-bottom: 100px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2f3542;
+  color: white;
+  text-align: center;
 }
 
 footer a {
   color: #16a085;
+}
+
+footer hr {
+  border: none;
+  height: 3px;
+  color: #2f3542;
+  background-color: #2f3542;
 }

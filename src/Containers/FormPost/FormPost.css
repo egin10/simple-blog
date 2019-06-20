@@ -1,0 +1,57 @@
+.form {
+    min-height: 81vh;
+    flex-direction: column;
+    font-size: calc(10px + 1vmin);
+    background-color: #2f3542;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.form .form-input {
+    height: 25px;
+    width: 450px;
+    border: 2px solid #16a085;
+    border-radius: 10px;
+    display: block;
+    margin-left: 440px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: grey;
+    text-align: center;
+}
+
+.form textarea {
+    resize: none;
+    width: 450px;
+    border: 2px solid #16a085;
+    border-radius: 10px;
+    display: block;
+    margin-left: 440px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.form label {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.form .btn-save {
+    background-color: transparent;
+    width: 150px;
+    height: 35px;
+    border: #16a085 solid 2px;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.form hr {
+    border: none;
+    height: 3px;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    margin-bottom: 40px;
+}

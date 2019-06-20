@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./BlogPostComponent.css";
-import PostArticle from "../../Components/PostArticle/PostArticleComponent";
+import "./BlogPost.css";
+import PostArticle from "../../Components/PostArticle/PostArticle";
 import axios from "axios";
-import SearchBox from './../../Components/SearchBox/SearchBoxComponent';
+import SearchBox from '../../Components/SearchBox/SearchBox';
 
-export default class BlogPostComponent extends Component {
+export default class BlogPost extends Component {
   state = {
     url: "https://json-server-simple-blog.herokuapp.com",
     posts: [],
@@ -111,7 +111,7 @@ export default class BlogPostComponent extends Component {
           <button
             className="btn-next"
             onClick={this.changePaginateLast}
-            disabled={paginate.current === Math.ceil(posts.length / 4) ? true : false}
+            disabled={paginate.current === Math.ceil(posts.length / 4) || Math.ceil(posts.length / 4) === 0 ? true : false}
           >
             Next
           </button>
