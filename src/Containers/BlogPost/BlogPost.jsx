@@ -7,6 +7,7 @@ import SearchBox from '../../Components/SearchBox/SearchBox';
 export default class BlogPost extends Component {
   state = {
     url: "https://json-server-simple-blog.herokuapp.com",
+    // url: "http://localhost:3001",
     posts: [],
     paginate: {
       first: 0,
@@ -116,7 +117,6 @@ export default class BlogPost extends Component {
             Next
           </button>
         </div>
-        <hr />
       </div>
     );
   }

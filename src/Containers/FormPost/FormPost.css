@@ -1,9 +1,9 @@
 .form {
-    min-height: 81vh;
+    min-height: 89vh;
     flex-direction: column;
     font-size: calc(10px + 1vmin);
     background-color: #2f3542;
-    padding: 10px;
+    padding-top: 5px;
     color: whitesmoke;
 }
 
@@ -12,10 +12,11 @@
     width: 450px;
     border: 2px solid #16a085;
     border-radius: 10px;
-    display: block;
-    margin-left: 440px;
+    /* display: block; */
+    /* margin-left: 33%; */
     margin-top: 5px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 ::placeholder {
@@ -28,10 +29,11 @@
     width: 450px;
     border: 2px solid #16a085;
     border-radius: 10px;
-    display: block;
-    margin-left: 440px;
+    /* display: block; */
+    /* margin-left: 33%; */
     margin-top: 5px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .form label {

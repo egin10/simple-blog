@@ -407,6 +407,46 @@
       "body": "Kiyaaaaaaaaa aaaaa aaaaaa aaaaaaa aaaaaaa aaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaa",
       "likes": 14,
       "dislikes": 3
+    },
+    {
+      "userId": 1,
+      "id": 52,
+      "title": "test post 1",
+      "body": "ini test untuk add post ke-1",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "userId": 2,
+      "id": 1561120006561,
+      "title": "Title test post-1",
+      "body": "Content test post-1, hiyahiyahiya",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "userId": 1,
+      "id": 1561120298185,
+      "title": "Title for Post-2",
+      "body": "Content for Post-2, Testing 1 2 3.",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "userId": 2,
+      "id": 1561120353361,
+      "title": "check sound 1 2 3",
+      "body": "check sound 1 2 3 4 5 6.",
+      "likes": 1,
+      "dislikes": 1
+    },
+    {
+      "userId": 3,
+      "id": 1561120422953,
+      "title": "Title, this is a post 3",
+      "body": "Content, this is a post's content 3",
+      "likes": 1,
+      "dislikes": 1
     }
   ],
   "comments": [
