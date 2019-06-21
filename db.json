@@ -447,6 +447,30 @@
       "body": "Content, this is a post's content 3",
       "likes": 1,
       "dislikes": 1
+    },
+    {
+      "userId": 1,
+      "id": 1561121364393,
+      "title": "egin10 has add new feature",
+      "body": "egin10 has add form input for input new post.",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "userId": 1,
+      "id": 1561121432745,
+      "title": "new post",
+      "body": "this is a new post",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "userId": 3,
+      "id": 1561121473697,
+      "title": "this is a new post 1",
+      "body": "this is a new post 1 by egin10.",
+      "likes": 0,
+      "dislikes": 0
     }
   ],
   "comments": [

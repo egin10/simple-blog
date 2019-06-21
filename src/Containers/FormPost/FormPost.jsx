@@ -3,10 +3,9 @@ import './FormPost.css'
 import axios from 'axios'
 
 export default class FormPost extends Component {
-
     state = {
-        url: "https://json-server-simple-blog.herokuapp.com",
-        // url: "http://localhost:3001",
+        // url: "https://json-server-simple-blog.herokuapp.com",
+        url: "http://localhost:3001",
         formData: {
             title: '',
             body: ''
@@ -38,6 +37,8 @@ export default class FormPost extends Component {
             .then(res => {
                 this.setState({ formData: cleanForm })
             })
+        alert('New Post has added.')
+        document.location.reload(true)
     }
 
     render() {
