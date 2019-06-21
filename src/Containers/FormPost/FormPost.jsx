@@ -4,8 +4,8 @@ import axios from 'axios'
 
 export default class FormPost extends Component {
     state = {
-        // url: "https://json-server-simple-blog.herokuapp.com",
-        url: "http://localhost:3001",
+        url: "https://json-server-simple-blog.herokuapp.com",
+        // url: "http://localhost:3001",
         formData: {
             title: '',
             body: ''
