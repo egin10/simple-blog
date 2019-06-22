@@ -98,35 +98,37 @@ export default class BlogPost extends Component {
   }
 
   render() {
-    let paginate = this.state.paginate;
-    let posts = this.state.posts;
+    let { posts, paginate } = this.state
+    let { handleAddPost, handleSearch, changeLikes,
+      changeDislikes, handleReadMore,
+      changePaginateFirst, changePaginateLast } = this
     return (
       <div className="article-page">
         <h3 className="header">ARTICLE</h3>
         <hr />
-        <button className="add-new-post" onClick={this.handleAddPost}>ADD POST</button>
-        <SearchBox search={this.handleSearch} />
+        <button className="add-new-post" onClick={handleAddPost}>ADD POST</button>
+        <SearchBox search={handleSearch} />
         {posts.slice(paginate.first, paginate.last).map(post => (
           <PostArticle
             key={post.id}
             data={post}
-            handleLike={this.changeLikes}
-            handleDislike={this.changeDislikes}
-            goDetail={this.handleReadMore}
+            handleLike={changeLikes}
+            handleDislike={changeDislikes}
+            goDetail={handleReadMore}
           />
         ))}
         <div className="paginate">
           <span>{posts.length === 0 ? 0 : paginate.current} of {Math.ceil(posts.length / 4)} pages.</span>
           <button
             className="btn-prev"
-            onClick={this.changePaginateFirst}
+            onClick={changePaginateFirst}
             disabled={paginate.first === 0 ? true : false}
           >
             Prev
           </button>
           <button
             className="btn-next"
-            onClick={this.changePaginateLast}
+            onClick={changePaginateLast}
             disabled={paginate.current === Math.ceil(posts.length / 4) || Math.ceil(posts.length / 4) === 0 ? true : false}
           >
             Next

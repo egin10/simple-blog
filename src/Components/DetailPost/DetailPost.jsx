@@ -21,12 +21,14 @@ export default class DetailPost extends Component {
     }
 
     render() {
+        let { title, body } = this.state.data
+        let { handleBack } = this
         return (
             <div className="detail-post" >
-                <h2>{this.state.data.title}</h2>
+                <h2>{title}</h2>
                 <hr />
-                <p>{this.state.data.body}</p>
-                <button className="btn-back" onClick={this.handleBack}>BACK</button>
+                <p>{body}</p>
+                <button className="btn-back" onClick={handleBack}>BACK</button>
             </div>
         )
     }

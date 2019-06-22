@@ -50,21 +50,23 @@ export default class FormPost extends Component {
     }
 
     render() {
+        let { title, body } = this.state.formData
+        let { handleChangeInput, handleSubmit } = this
         return (
             <div className="form">
                 <h3>ADD NEW POST</h3>
                 <hr />
                 <label htmlFor="title">TITLE</label><br />
                 <input type="text" name="title" className="form-input"
-                    value={this.state.formData.title}
+                    value={title}
                     placeholder="Title of post"
-                    onChange={this.handleChangeInput} /><br />
+                    onChange={handleChangeInput} /><br />
                 <label htmlFor="body">CONTENT</label><br />
                 <textarea name="body" cols="30" rows="10"
-                    value={this.state.formData.body}
+                    value={body}
                     placeholder="Content of post..."
-                    onChange={this.handleChangeInput}></textarea><br />
-                <button className="btn-save" onClick={this.handleSubmit}>SAVE</button>
+                    onChange={handleChangeInput}></textarea><br />
+                <button className="btn-save" onClick={handleSubmit}>SAVE</button>
             </div>
         )
     }

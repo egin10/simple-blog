@@ -11,6 +11,7 @@
     margin-top: 38px;
     border-left: solid grey 1px;
     border-top: solid #16a085 1px;
+    padding: 30px;
 }
 
 .detail-post .btn-back {
@@ -21,7 +22,6 @@
     background-color: transparent;
     color: #7f8c8d;
     margin-left: 90%;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
