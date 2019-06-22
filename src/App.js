@@ -9,6 +9,7 @@ import "./App.css"
 import BlogPost from "./Containers/Pages/BlogPost/BlogPost"
 import Home from "./Containers/Home/Home"
 import FormPost from "./Containers/Pages/FormPost/FormPost"
+import DetailPost from './Components/DetailPost/DetailPost';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/article' component={BlogPost} />
           <Route path='/article-post' component={FormPost} />
+          <Route path='/detail-article/:id' component={DetailPost} />
         </div>
         <footer>
           <p>Copyright&copy;2019.<a href="https://github.com/egin10" target="_blank" rel="noopener noreferrer">egin10</a></p>

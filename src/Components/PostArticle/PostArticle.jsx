@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 //Style
 import "./PostArticle.css";
@@ -13,7 +13,7 @@ const PostArticle = props => {
       <span>{data.likes} Likes &emsp;|&emsp; {data.dislikes} Dislikes</span>
       <button className="btn-like" onClick={() => props.handleLike(data)} >Like</button>
       <button className="btn-dislike" onClick={() => props.handleDislike(data)} >Dislike</button>
-      <button className="btn-read">Read more...</button>
+      <button className="btn-read" onClick={() => props.goDetail(data.id)}>Read more...</button>
     </div>
   );
 };

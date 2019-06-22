@@ -53,6 +53,10 @@ export default class BlogPost extends Component {
   handleAddPost = () => {
     this.props.history.push('/article-post')
   }
+
+  handleReadMore = (id) => {
+    this.props.history.push(`/detail-article/${id}`)
+  }
   //--- END HANDLER
 
   //--- COMUNICATION TO API
@@ -108,6 +112,7 @@ export default class BlogPost extends Component {
             data={post}
             handleLike={this.changeLikes}
             handleDislike={this.changeDislikes}
+            goDetail={this.handleReadMore}
           />
         ))}
         <div className="paginate">
