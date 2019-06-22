@@ -51,7 +51,7 @@ export default class BlogPost extends Component {
   }
 
   handleAddPost = () => {
-    document.location.href = "/article-post"
+    this.props.history.push('/article-post')
   }
   //--- END HANDLER
 

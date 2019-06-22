@@ -34,13 +34,19 @@ export default class FormPost extends Component {
     }
 
     postNewDataAPI = (newData) => {
-        let cleanForm = { title: '', body: '' }
+        // let cleanForm = { title: '', body: '' }
         axios.post(`${this.state.url}/posts`, newData)
             .then(res => {
-                this.setState({ formData: cleanForm })
+                // this.setState({ formData: cleanForm })
+                alert('New Post has added.')
+                this.props.history.push('/article')
             })
-        alert('New Post has added.')
-        document.location.href = "/article"
+    }
+
+    //-- COMPONENT LIFECYCLE
+    componentWillUnmount() {
+        let cleanForm = { title: '', body: '' }
+        this.setState({ formData: cleanForm })
     }
 
     render() {
