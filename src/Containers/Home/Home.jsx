@@ -7,7 +7,7 @@ export default class Home extends Component {
       <Fragment>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>Hello Egin10.</p>
+          <p>HELLO WORLD! <br /> How are you?</p>
         </header>
       </Fragment>
     );

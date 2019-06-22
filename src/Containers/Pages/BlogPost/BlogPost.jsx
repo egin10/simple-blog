@@ -1,8 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
+import axios from "axios"
+
+//Style
 import "./BlogPost.css";
-import PostArticle from "../../Components/PostArticle/PostArticle";
-import axios from "axios";
-import SearchBox from '../../Components/SearchBox/SearchBox';
+
+//Component
+import PostArticle from "../../../Components/PostArticle/PostArticle";
+import SearchBox from '../../../Components/SearchBox/SearchBox';
 
 export default class BlogPost extends Component {
   state = {
@@ -17,7 +21,7 @@ export default class BlogPost extends Component {
     isLikeDislike: false
   };
 
-  //handler
+  //--- HANDLER
   changePaginateFirst = () => {
     let newPaginate = this.state.paginate;
     newPaginate.first = newPaginate.first - 4;
@@ -46,7 +50,12 @@ export default class BlogPost extends Component {
     word === '' ? this.getPostAPI() : this.getSearchAPI(word)
   }
 
-  //communication to API
+  handleAddPost = () => {
+    document.location.href = "/article-post"
+  }
+  //--- END HANDLER
+
+  //--- COMUNICATION TO API
   getPostAPI = () => {
     let current = this.state.isLikeDislike ? this.state.paginate : { first: 0, last: 4, current: 1 }
     axios.get(`${this.state.url}/posts?_sort=id&_order=desc`).then(res => this.setState({
@@ -77,6 +86,7 @@ export default class BlogPost extends Component {
     axios.patch(`${this.state.url}/posts/${id}`, { 'dislikes': value })
       .then(() => this.getPostAPI())
   }
+  //--- END COMUNICATION TO API
 
   //Lifecycle
   componentDidMount() {
@@ -88,9 +98,9 @@ export default class BlogPost extends Component {
     let posts = this.state.posts;
     return (
       <div className="article-page">
-        <h3 className="header">Articles</h3>
+        <h3 className="header">ARTICLE</h3>
         <hr />
-        <button className="add-new-post">Add New Post</button>
+        <button className="add-new-post" onClick={this.handleAddPost}>ADD POST</button>
         <SearchBox search={this.handleSearch} />
         {posts.slice(paginate.first, paginate.last).map(post => (
           <PostArticle

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import './FormPost.css'
 import axios from 'axios'
+
+//style
+import './FormPost.css'
 
 export default class FormPost extends Component {
     state = {
@@ -38,25 +40,25 @@ export default class FormPost extends Component {
                 this.setState({ formData: cleanForm })
             })
         alert('New Post has added.')
-        document.location.reload(true)
+        document.location.href = "/article"
     }
 
     render() {
         return (
             <div className="form">
-                <h3>Add new post</h3>
+                <h3>ADD NEW POST</h3>
                 <hr />
-                <label htmlFor="title">Title</label><br />
+                <label htmlFor="title">TITLE</label><br />
                 <input type="text" name="title" className="form-input"
                     value={this.state.formData.title}
                     placeholder="Title of post"
                     onChange={this.handleChangeInput} /><br />
-                <label htmlFor="body">Content</label><br />
+                <label htmlFor="body">CONTENT</label><br />
                 <textarea name="body" cols="30" rows="10"
                     value={this.state.formData.body}
                     placeholder="Content of post..."
                     onChange={this.handleChangeInput}></textarea><br />
-                <button className="btn-save" onClick={this.handleSubmit}>Save</button>
+                <button className="btn-save" onClick={this.handleSubmit}>SAVE</button>
             </div>
         )
     }
