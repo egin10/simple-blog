@@ -21,3 +21,22 @@
     border-radius: 10px;
     color: whitesmoke;
 }
+
+.game-rsp .result {
+    font-size: 30px;
+}
+
+.game-rsp .WIN {
+    font-size: 40px;
+    color:green;
+}
+
+.game-rsp .LOSE {
+    font-size: 40px;
+    color:red;
+}
+
+.game-rsp .DRAW {
+    font-size: 40px;
+    color:blue;
+}
