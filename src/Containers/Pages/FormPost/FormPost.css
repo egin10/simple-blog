@@ -1,9 +1,9 @@
 .form {
-    min-height: 90.4vh;
+    min-height: 89.5vh;
     flex-direction: column;
     font-size: calc(10px + 1vmin);
     background-color: #2f3542;
-    padding-top: 5px;
+    padding-top: 10px;
     color: whitesmoke;
 }
 

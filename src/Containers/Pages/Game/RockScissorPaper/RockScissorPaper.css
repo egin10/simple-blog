@@ -1,0 +1,23 @@
+.game-rsp {
+    margin: 60px;
+    text-align: center;
+    padding: 0px 60px;
+}
+
+.game-rsp hr {
+    margin-bottom: 30px;
+}
+
+.game-rsp .btn-choice {
+    background-color: transparent;
+    border: solid 1px #16a085;
+    font-size: 30px;
+    width: 250px;
+    margin: 20px;
+}
+
+.game-rsp .btn-choice:hover {
+    background-color: #2f3542;
+    border-radius: 10px;
+    color: whitesmoke;
+}

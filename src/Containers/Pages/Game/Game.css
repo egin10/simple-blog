@@ -1,0 +1,17 @@
+.games {
+    margin: 60px;
+    text-align: center;
+    padding: 0px 60px;
+}
+
+.games .btn-games {
+    margin:20px;
+    font-size: 30px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.games .btn-games:hover {
+    color: whitesmoke;
+    background-color: #2f3542;
+}
